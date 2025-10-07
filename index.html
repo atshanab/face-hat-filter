@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Face Hat Filter (MediaPipe)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+</head>
+<body>
+  <div id="ui">
+    <h1>Face Hat Filter 🎃 (MP)</h1>
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <label><input type="checkbox" id="toggleDots" checked> Show green dots</label>
+      <label><input type="checkbox" id="flipCam"> Rear camera</label>
+    </div>
+  </div>
+
+  <div id="stage">
+    <video id="video" playsinline></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

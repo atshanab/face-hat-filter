@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Face Hat Filter</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- TensorFlow.js and Face Landmarks Detection -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection@1.0.5/dist/face-landmarks-detection.min.js"></script>
+</head>
+<body>
+  <div id="ui">
+    <h1>Face Hat Filter 🎃</h1>
+    <p class="hint">If camera doesn't start automatically, tap <b>Start</b>.</p>
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <label><input type="checkbox" id="toggleDots" checked> Show green dots</label>
+      <label><input type="checkbox" id="flipCam"> Rear camera</label>
+    </div>
+  </div>
+
+  <div id="stage">
+    <video id="video" playsinline autoplay muted></video>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
